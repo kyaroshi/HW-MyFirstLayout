@@ -3,7 +3,10 @@ body{
 }
 
 nav{
-    display: inline-block;
+    display: block;
+    float: right;
+    width: 100%;
+ 
 }
 
 #navList {
@@ -12,96 +15,318 @@ nav{
     padding: 0;
     overflow: hidden;
     background-color: rgb(255, 255, 255);
-    position: fixed;
+    position: static;
     top: 0;
     width: 100%; 
 }
 
 .navItem {
-    float: right;
+   float: left;
+    margin-bottom: 10px;
 }
   
 li a {
     display: block;
-    color: rgb(4, 0, 22);
+    color: rgb(141, 19, 76);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
   
 li a:hover {
-    background-color: #111;
+    background-color: rgb(141, 19, 76);
     color: white
 }
 
 .activeNav {
-    border-bottom: 2px rgb(4, 0, 22) solid;
+    border-bottom: 2px rgb(141, 19, 76) solid;
   }
 
-
-.left {
-    float: left;
-    width: 25%;
-    padding: 15px;
-    height: 100%;
+.grid{
+    display: grid;
+    grid-template-columns: 85px repeat(12, 85px) 85px;
+    grid-auto-rows: 85px;
+    grid-template-rows: repeat(20, 85px);
+    grid-column-gap: 16px;
+    min-height: 100vh;
 }
 
-.me{
-      display: inline-block;
-      padding: 10px;
-      margin: 10px;
+/* left hero content */
+.upperLeft {
+    grid-area: leftHero;
+    grid-column: 3/8;
+    grid-row: 3/8;
+    /*width: 25%;
+    padding: 15px;
+    height: 100%;*/
+    color: rgb(4, 0, 22);
 }
 
-.right {
-    float: left;
-    width: 60%;
-    padding: 15px;
-    height: 100%;
+#name{
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
-.bottom{
-    margin: auto;
-    float: left;
-    width: 100%;
-    height: 200px;
-    padding: 15px;
-    text-align: center;
+h1{
+    margin-top: 12px;
+    margin-bottom: 8px;
+    font-size: 36px;
+}
+
+#role{
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 48px;
 }
 
 button{
-    margin-bottom: 20px;
-    width: 140px;
-    height: 40px;
+    margin-top: 0px;
+    margin-bottom: 48px;
+    width: 287px;
+    height: 50px;
     background-color: rgb(141, 19, 76);
     border-radius: 12px;
     border: none;
     font-size: 16px;
     color: white;
-    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: width 1s, height 1s;
 }
 
 button:hover{
-    width: 200px;
+    width: 300px;
     height: 60px;
+    background-color: rgb(150, 35, 93)
 }
 
-.bottom{
-    border-top: 1px solid lightgray;
-    padding: 15px;
+.findMe{
+    margin-bottom: 8px;
+    margin-top: 0;
+    padding: 0;
+    font-weight: 300;
 }
 
-.bottom a{
+.socialMedia a{
     color: rgb(141, 19, 76);
     text-decoration: none;
 }
 
-.bottom a:hover{
+.socialMedia a:hover{
     text-decoration: underline;
 }
 
-.linkedIn{
-    display: inline-block;
-    padding-right: 30px;
-    margin-right: 30;
+.linkedIN{
+    padding-right: 12px;
 }
+.behance{
+    padding-left: 12px;
+}
+
+
+/*right hero content */
+.upperRight {
+    grid-area: rightHero;
+    grid-column: 10/span 3;
+    grid-row: 1/7;
+    justify-items: start;
+    align-items: start;
+    /*width: 60%;
+    padding: 15px;
+    height: 100%; */
+    color: rgb(4, 0, 22);
+}
+
+.me {
+    display: grid;
+    max-height: 500px;
+    border-radius: 0px;
+}
+
+.name {
+    margin-left: 10px;
+    padding-left: 10px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.arrow{
+    grid-row: 7;
+    grid-column: 8;
+  
+
+}
+
+.bounceMe {
+    animation: bounceArrow 2s infinite;
+    max-width: 30px;
+    max-height: 30px;
+    padding-top: 30px;
+  }
+
+@keyframes bounceArrow {
+    from { margin-top: 0px;
+  
+    }
+    50% {margin-top: 10px;
+  
+    }
+    to {margin-top: 0px;
+  
+    }
+  }
+
+/*.line1{
+    border: 0.3px solid rgb(212, 212, 212);
+    grid-column: 1/15;
+    grid-row: 9;
+    height: 0px;
+}*/
+
+.boxText{
+    grid-column: 2/14;
+    grid-row: 9/11;
+}
+
+
+
+.section2title {
+    grid-column: 6/span 5;
+    grid-row: 12;
+    
+}
+
+.squares{
+    grid-column: 2/15;
+    grid-row: 13/20;
+}
+
+.square1{
+    display: inline-block;
+    border: 6px solid #7FB9B9;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    height: 380px;
+    width: 380px;
+    text-align: center;  
+    
+}
+
+.square2{
+    display: inline-block;
+    border: 6px solid #EBAEC8;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    height: 380px;
+    width: 380px;
+    text-align: center;
+    
+}
+
+.square3{
+    display: inline-block;
+    border: 6px solid #FCFC99;
+    margin-bottom: 16px;
+    
+    
+    height: 380px;
+    width: 380px;
+    text-align: center;
+    
+}
+
+
+
+.secondSub{
+    grid-column: 7/span 2;
+    grid-row: 19;
+}
+
+.secondTitle{
+    grid-column: 5/span 6;
+    grid-row: 20;
+    margin-top: 0;
+}
+
+.backgroundUp{
+    background-image: url(/HW-MyFirstLayout/Images/reinis-birznieks-lu5uhEAy2lI-unsplash.jpg);
+    background-size: cover;
+    height: 700px;
+}
+
+.backgroundRectangle{
+    display: flex;
+    background-color: white;
+    height: 500px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    
+}
+
+@media only screen and (max-width: 500px) {
+    .me{
+        display: none;
+    }
+  
+    
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .nav{
+
+    }
+
+    .upperLeft{
+        grid-column: 2;
+    }
+
+    .upperRight{
+        display: none;
+    }
+
+    .arrow{
+        display: block;
+        margin: auto;
+    }
+
+    .boxText{
+        grid-column:2/3;
+    }
+
+    .section2title{
+        grid-column: 2/3;
+        grid-row: 14;
+    }
+
+    .square1, .square2, .square3{
+        grid-column: 2/3;
+        grid-row: 16/19;
+       height: 100px;
+
+    }
+
+    .square1{
+        
+    }
+
+    .square2{
+    }
+
+    .square3{
+    }
+
+    .secondSub{
+
+    }
+
+    .secondTitle{
+
+    }
+
+}
+
