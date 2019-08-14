@@ -275,14 +275,17 @@ button:hover{
     
     .grid{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        
     }
-    .nav{
-
-    }
+   
 
     .upperLeft{
         grid-column: 2;
+    }
+
+    h1{
+        font-size: 2.1em;
     }
 
     .upperRight{
@@ -291,21 +294,26 @@ button:hover{
 
     .arrow{
         display: block;
-        margin: auto;
+        float: left;
     }
 
     .boxText{
-        grid-column:2/3;
+        grid-column:2/6;
+        grid-row: 9/13;
     }
 
     .section2title{
-        grid-column: 2/3;
+        grid-column: 2/9;
         grid-row: 14;
+        font-size: 0.9em;
+    }
+
+    .squares{
+        grid-row: 15;
     }
 
     .square1, .square2, .square3{
-        grid-column: 2/3;
-        grid-row: 16/19;
+      
        height: 100px;
 
     }
