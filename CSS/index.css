@@ -43,7 +43,7 @@ li a:hover {
 
 .grid{
     display: grid;
-    grid-template-columns: 0px repeat(12, 85px) 0px;
+    grid-template-columns: 0px repeat(14, 85px) 0px;
     grid-auto-rows: 85px;
     grid-template-rows: repeat(20, 85px);
     grid-column-gap: 16px;
@@ -54,7 +54,7 @@ li a:hover {
 /* left hero content */
 .upperLeft {
     grid-area: leftHero;
-    grid-column: 3/8;
+    grid-column: 4/9;
     grid-row: 3/8;
     /*width: 25%;
     padding: 15px;
@@ -152,7 +152,7 @@ button:hover{
 }
 
 .arrow{
-    grid-row: 7;
+    grid-row: 8;
     grid-column: 8;
 
 }
@@ -161,7 +161,6 @@ button:hover{
     animation: bounceArrow 2s infinite;
     max-width: 30px;
     max-height: 30px;
-    padding-top: 30px;
   }
 
 @keyframes bounceArrow {
@@ -184,20 +183,20 @@ button:hover{
 }*/
 
 .boxText{
-    grid-column: 3/14;
+    grid-column: 3/15;
     grid-row: 9/11;
 }
 
 
 
 .section2title {
-    grid-column: 6/span 5;
+    grid-column: 7/span 5;
     grid-row: 12;
     
 }
 
 .squares{
-    grid-column: 2/16;
+    grid-column: 3/17;
     grid-row: 13/20;
 }
 
@@ -371,12 +370,12 @@ button:hover{
     }
 
     .boxText{
-        grid-column:2/8;
+        grid-column:3/8;
         grid-row: 9/12;
     }
 
     .section2title{
-        grid-column: 2/9;
+        grid-column: 3/9;
         grid-row: 13;
         font-size: 0.9em;
     }
@@ -470,7 +469,7 @@ button:hover{
     }
 
     .overlay{
-        max-height: 200px;
+        max-height: 
     }
 
     .square1, .square2, .square3{
