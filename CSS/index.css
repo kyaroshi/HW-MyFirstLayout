@@ -498,7 +498,7 @@ button:hover{
     
     .grid{
         display: grid;
-        grid-template-columns: 0px repeat(4,85px) 0px;
+        grid-template-columns: 0px repeat(4,1fr) 0px;
         grid-column-gap: 16px;
         min-height: 100vh; 
     }
@@ -568,9 +568,13 @@ button:hover{
 
     .square1, .square2, .square3, .square4, .square5, .square6{
       
-       max-width: 388px;
+       max-width: 344px;
        margin: 0;
 
+    }
+
+    .overlay{
+        max-width: 344px;
     }
 
     .caseStudy{
