@@ -469,6 +469,19 @@ button:hover{
         grid-column: 2/8;
     }
 
+    .squareText{
+        font-size: 1em;
+        position: relative;
+        margin-top: 0px;
+        top: 40%;
+    }
+
+    .squareLightText{
+        font-size: 1em;
+        position: relative;
+        margin-bottom: 0px;
+        top: 40%;
+    }
 
     .overlay{
         max-height: 250px;
@@ -561,7 +574,7 @@ button:hover{
 
     .squares{
         grid-row: 12/19;
-        grid-column: 2/6;
+        grid-column: 1/6;
     }
 
   
